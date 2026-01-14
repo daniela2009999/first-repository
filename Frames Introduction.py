@@ -57,4 +57,16 @@ entry1.grid(row = 0, column = 0)
 entry2 = tk.Entry(leftFrame)
 entry2.grid(row = 1, column = 0)
 
+entry3 = tk.Entry(leftFrame)
+entry3.grid(row = 2, column = 0)
+
+#colour changing right frame label
+
+colourLabel = tk.Label(rightFrame)
+colourLabel.grid(row = 2)
+
+
+colourchangebutton = tk.Button(rightFrame)
+colourchangebutton.grid(row = 2, text = 'change')
+
 root.mainloop()
