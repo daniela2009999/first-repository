@@ -21,7 +21,7 @@ label.grid(row = 0, column = 0, columnspan = 2)
 #Frames initializaion
 
 leftFrame = tk.Frame(root, bg = 'blue')
-rightFrame = tk.Frame(root)
+rightFrame = tk.Frame(root, bg = 'pink')
 # Left frame configuration
 
 leftFrame.rowconfigure(0, weight = 1)
@@ -40,14 +40,12 @@ rightFrame.rowconfigure(0, weight = 1 )
 
 rightFrame.rowconfigure(0, weight = 1)
 rightFrame.rowconfigure(1, weight= 1)
-rightFrame.rowconfigure(2, weight = 1)
 
 rightFrame.columnconfigure(0 , weight = 1)
-rightFrame.columnconfigure(1, weight= 1)
-rightFrame.columnconfigure(2, weight= 1)
+
 rightFrame.grid_propagate(False)
 
-rightFrame.grid(row = 1, column =0)
+rightFrame.grid(row = 1, column =1, sticky = 'nsew')
 
 
 # 3 entries in the left row 2-3
@@ -60,13 +58,18 @@ entry2.grid(row = 1, column = 0)
 entry3 = tk.Entry(leftFrame)
 entry3.grid(row = 2, column = 0)
 
+
+#colour change
+colour = 'green'
+
+
 #colour changing right frame label
 
-colourLabel = tk.Label(rightFrame)
-colourLabel.grid(row = 2)
+colourLabel = tk.Label(rightFrame, bg = colour, height = 2, width = 10)
+colourLabel.grid(row = 0, column = 0)
 
 
-colourchangebutton = tk.Button(rightFrame)
-colourchangebutton.grid(row = 2, text = 'change')
+colourchangebutton = tk.Button(rightFrame, text = 'change')
+colourchangebutton.grid(row = 1, column = 0)
 
 root.mainloop()
